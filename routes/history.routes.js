@@ -3,7 +3,8 @@ let History = require("../model/history.model");
 
 // List all videos in the history http://localhost:3000/history
 router.route("/").get( (req, res) =>{
-    History.find().then(his => res.json(his)).catch(err => res.status(400).json("Error: "+err));
+    History.find().then(his => res.json(his))
+        .catch(err => res.status(400).json("Error: "+err));
 } );
 
 
